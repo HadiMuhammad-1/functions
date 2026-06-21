@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Exercises</title>
+</head>
+<body>
+
+    <!-- Exercise 1 -->
+    <h1 class="marks">Marks: 50</h1>
+    <button class="add">Add Bonus Marks</button>
+    <button class="deduct">Deduct Marks</button>
+
+    <hr>
+
+    <!-- Exercise 2 -->
+    <h1 class="age">Age: 18</h1>
+    <button class="birthday">Birthday</button>
+    <button class="back">Go Back One Year</button>
+
+    <hr>
+
+    <!-- Exercise 3 -->
+    <h1 class="status">Bulb is OFF</h1>
+    <button class="on">Turn ON</button>
+    <button class="off">Turn OFF</button>
+
+    <script>
+        // Exercise 1
+        let marks = 50;
+        let marksHeading = document.querySelector(".marks");
+        let addBtn = document.querySelector(".add");
+        let deductBtn = document.querySelector(".deduct");
+
+        function addMarks() {
+            marks += 5;
+            marksHeading.innerHTML = "Marks: " + marks;
+        }
+
+        function deductMarks() {
+            marks -= 5;
+            marksHeading.innerHTML = "Marks: " + marks;
+        }
+
+        addBtn.addEventListener("click", addMarks);
+        deductBtn.addEventListener("click", deductMarks);
+
+        // Exercise 2
+        let age = 18;
+        let ageHeading = document.querySelector(".age");
+        let birthdayBtn = document.querySelector(".birthday");
+        let backBtn = document.querySelector(".back");
+
+        function incrementAge() {
+            age++;
+            ageHeading.innerHTML = "Age: " + age;
+        }
+
+        function decrementAge() {
+            age--;
+            ageHeading.innerHTML = "Age: " + age;
+        }
+
+        birthdayBtn.addEventListener("click", incrementAge);
+        backBtn.addEventListener("click", decrementAge);
+
+        // Exercise 3
+        let statusHeading = document.querySelector(".status");
+        let onBtn = document.querySelector(".on");
+        let offBtn = document.querySelector(".off");
+
+        function turnOn() {
+            statusHeading.innerHTML = "Bulb is ON";
+        }
+
+        function turnOff() {
+            statusHeading.innerHTML = "Bulb is OFF";
+        }
+
+        onBtn.addEventListener("click", turnOn);
+        offBtn.addEventListener("click", turnOff);
+    </script>
+
+</body>
+</html>
